@@ -1,0 +1,189 @@
+*{
+    box-sizing:border-box;
+}
+body{
+   background-color:white;
+}
+.cont2 ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+/*nav bar styles*/
+.cont2{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:1;
+    grid-template-areas:". l l l l l l l l l l .";
+    background-color:rgba(0,0,0,.6);
+    position:sticky;
+    top:0px;
+    z-index:20;
+    padding:20px;
+}
+.cont2 .nav{
+    grid-area:l;
+    display:grid;
+    grid-template-columns:repeat(20,1fr);
+    grid-template-rows:repeat(3,auto);
+    grid-template-areas:"logo logo logo . . . . . . . . . . . . . home . lib . about";
+}
+.nav li:nth-child(1){
+    grid-area:logo;
+    grid-row-start:2;
+    grid-row-end:3;
+    color:white;
+    font-weight:bold;
+    font-size:22px;
+    
+}
+.nav li:nth-child(2){
+    grid-area:home;
+    grid-row-start:2;
+    grid-row-end:3;
+    color:white;
+}
+.nav li:nth-child(3){
+    grid-area:lib;
+    grid-row-start:2;
+    grid-row-end:3;
+    color:white;
+}
+.nav li:nth-child(4){
+    grid-area:about;
+    grid-row-start:2;
+    grid-row-end:3;
+    color:white;
+}
+a{
+    color:white;
+}
+a:hover{
+    color:antiquewhite;
+    text-decoration:none;
+}
+
+/*background*/
+.cont3 img{
+   width:100%;
+   height:90vh;
+   position:absolute;
+   z-index:-1;
+}
+.cont3{
+    position:relative;
+    top:-70px;
+}
+.cont3 .back_black{
+    background-color:rgba(0,0,0,.6);
+    height:90vh;
+    width:100%;
+    color:white;
+    font-weight:bold;
+    font-size:80px;
+    text-align:center;
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:". title title title title title title title title title title ." ;
+}
+.back_black p{
+    grid-area:title;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+
+/*libraries*/
+.lib{
+    display:grid;
+    background-color:#f9f9f9;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:repeat(20,1fr);
+    grid-template-areas:". . . . . head head head head head . ."
+    ". . . e e e e e e . . ."
+    ". . . a a a a a a . . .";
+}
+.lib h1{
+    grid-area:head;
+    grid-row:2/3;
+    font-size:40px;
+    margin-left:50px;
+}
+.lib .english{
+    grid-area:e;
+    grid-row:4/9;
+    background-color:white;
+    box-shadow:2px 2px 20px 8px #ddd;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+.lib .english a{
+    font-weight:bold;
+    font-size:22px;
+    color:black;
+    position:absolute;
+    z-index:3;
+}
+.lib .english a:hover{
+    color:white;
+    transition-duration:.3s;
+    transition-timing-function: ease;
+}
+
+.english::before{
+    content:"";
+    height:280px;
+    position:absolute;
+    left:0px;
+    z-index:2;
+    transition-duration:1s;
+    transition-timing-function: ease;
+}
+.english:hover::before{
+    background-color:rgba(161,143,96,.7);
+    width:100%;
+}
+.lib .arabic{
+    grid-area:a;
+    grid-row:11/16;
+    background-color:white;
+    box-shadow:2px 2px 20px 8px #ddd;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+.lib .arabic a{
+    font-weight:bold;
+    font-size:22px;
+    color:black;
+    position:absolute;
+    z-index:3;
+}
+.lib .arabic a:hover{
+    color:white;
+    transition-duration:.3s;
+    transition-timing-function: ease;
+}
+.arabic::before{
+    content:"";
+    height:280px;
+    position:absolute;
+    left:0px;
+    z-index:2;
+    transition-duration:1s;
+    transition-timing-function: ease;
+}
+.arabic:hover::before{
+    background-color:rgba(161,143,96,.7);
+    width:100%;
+}
+
+
+
+
+
+

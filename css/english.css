@@ -1,0 +1,139 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-color:white;
+}
+.artists li a{
+    font-weight:normal;
+    font-size:16px;
+}
+.cont3{
+    top:-95px;
+}
+
+.cont3 .back_black{
+    background-color:rgba(0,0,0,.6);
+    height:90vh;
+    width:100%;
+    color:white;
+    font-weight:bold;
+    font-size:80px;
+    text-align:center;
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-template-areas:". title title title title title title title title title title ."
+    "links links links links links links links links links links links links" ;
+}
+.back_black p{
+    grid-area:title;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+
+/* artists links*/
+.back_black .links{
+    grid-area:links;
+    grid-row-start:4;
+    grid-row-end:5;
+    font-weight:normal;
+    font-size:16px;
+    text-align:center;
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:repeat(3,1fr);
+    grid-template-areas:". a . m . i . k . j . .";
+    
+}
+.links #alans{
+    grid-area:a;
+    grid-row:2/3;
+}
+.links #maroons{
+    grid-area:m;
+    grid-row:2/3;
+}
+.links #innas{
+    grid-area:i;
+    grid-row:2/3;
+}
+.links #katys{
+    grid-area:k;
+    grid-row:2/3;
+}
+.links #justins{
+    grid-area:j;
+    grid-row:2/3;
+}
+.links a{
+    background-color:rgba(161,143,96,1);
+    padding:5px;
+    border-radius:5px;
+    transition-duration:1s;
+}
+.links a:hover{
+    background-color:rgba(161,143,96,.7);
+    color:antiquewhite;
+}
+
+
+
+
+/*audios*//*the styles below shared between arabic and english files*/
+.basic_parent{
+    background-color:rgba(161,143,96,.8);
+    
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:repeat(9,1fr);
+    grid-template-areas:". . . . . head head . . . . ."
+    ". alan1 alan1 alan1 alan1 alan1 alan1 alan1 alan1 alan1 alan1 ."
+    ". alan2 alan2 alan2 alan2 alan2 alan2 alan2 alan2 alan2 alan2 ."
+    ". alan3 alan3 alan3 alan3 alan3 alan3 alan3 alan3 alan3 alan3 ."
+    ". alan4 alan4 alan4 alan4 alan4 alan4 alan4 alan4 alan4 alan4 ."
+    ". alan5 alan5 alan5 alan5 alan5 alan5 alan5 alan5 alan5 alan5 ."
+    ". alan6 alan6 alan6 alan6 alan6 alan6 alan6 alan6 alan6 alan6 ."
+    ;
+}
+.basic_parent h1{
+    grid-area:head;
+    grid-row-start:2;
+    grid-row-end:3;
+    color:antiquewhite;
+}
+h4{
+    color:antiquewhite;
+}
+.basic1{
+    grid-area:alan1;
+    grid-row-start:3;
+    grid-row-end:4;
+}
+.basic2{
+    grid-area:alan2;
+    grid-row-start:4;
+    grid-row-end:5;
+}
+.basic3{
+    grid-area:alan3;
+    grid-row-start:5;
+    grid-row-end:6;
+}
+.basic4{
+    grid-area:alan4;
+    grid-row-start:6;
+    grid-row-end:7;
+}
+.basic5{
+    grid-area:alan5;
+    grid-row-start:7;
+    grid-row-end:8;
+}
+.basic6{
+    grid-area:alan6;
+    grid-row-start:8;
+    grid-row-end:9;
+}
+
+

@@ -1,0 +1,102 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+}
+body{
+    background-image:url("../images/login_back.jpg");
+    background-size:100% 100vh;
+    display:grid;
+    height:100vh;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:repeat(12,1fr);
+    grid-template-areas:". . . .cont cont cont cont  . . . .";
+
+}
+.cont{
+    display:grid;
+    grid-area:cont;
+    grid-row-start:3;
+    grid-row-end:11;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:repeat(12,1fr);
+    grid-template-areas:".   form form form form form form form form form form  . ";
+    background-color:rgba(0,0,0,.4);
+}
+.cont form{
+    grid-area:form;
+    grid-row-start:2;
+    grid-row-end:12;
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:repeat(12,1fr);
+    grid-template-areas:
+    ". input1 input1 input1 input1 input1 input1 input1 input1 input1 input1 ."
+    ". input2 input2 input2 input2 input2 input2 input2 input2 input2 input2 ."
+    ". input3 input3 input3 input3 input3 input3 input3 input3 input3 input3 ."
+    ". l1 l1 l1 l1 l1 l1 l1 l1 l1 l1 ."
+    ". l2 l2 l2 l2 l2 l2 l2 l2 l2 l2 ."
+    ". . . . . a a a a a a .";
+}   
+.cont form input[type=text]{
+    grid-area:input1;
+    grid-row-start:2;
+    grid-row-end:3;
+    border:none;
+    outline:none;
+    
+}
+label[for=username],.bi bi-person-circle{
+    grid-area:l1;
+    grid-row-start:1;
+    grid-row-end:2;
+
+}
+
+input[type=password]{
+    grid-area:input2;
+    grid-row-start:5;
+    grid-row-end:6;
+    border:none;
+    outline:none;
+}
+
+label[for=password],.bi bi-shield-lock-fill{
+    grid-area:l2;
+    grid-row-start:4;
+    grid-row-end:5;
+
+}
+
+input[type=submit]{
+    grid-area:input3;
+    grid-row-start:8;
+    grid-row-end:9;
+    border:none;
+    outline:none;
+    background-color:#f9a051;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+a{
+    grid-area:a;
+    grid-row-start:11;
+    grid-row-end:12;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+a:hover{
+    text-decoration:none;
+    color:#f9a051;
+    font-weight:bold;
+}
+label{
+    color:white;
+}
+i{
+    color:#f9a051;
+}
+   
+
